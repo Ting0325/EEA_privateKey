@@ -8,12 +8,12 @@ public class Driver {
 		System.out.println("Enter two prime numbers");
 		//int pn1 = sc.nextInt();
 		//int pn2 = sc.nextInt();
-		int pn1 = 5;//61;//5;
-		int pn2 = 11;//53;//11;
+		int pn1 = 3;//61;//5;
+		int pn2 = 7;//53;//11;
 		System.out.println("pn1 :"+pn1);
 		System.out.println("pn2 :"+pn2);
 		//int e = sc.nextInt();//17
-		int e = 17;//17;
+		int e = 5;//17;
 		System.out.println("e :"+e);
 		int fee = (pn1-1)*(pn2-1);
 		ArrayList<Integer> r = new ArrayList<Integer>();
@@ -45,9 +45,18 @@ public class Driver {
 
 		int subsitute = q.get(0);
 		subsitute *= q.get(1);
-		System.out.println("sub:"+subsitute);
-		//int x = ((q.get(0)*q.get(1)+1)+q.get(0))*(-1);
-		int x = ((subsitute+1)*q.get(2) + q.get(0))*(-1);
+		System.out.println("setps:"+step);
+		int x = 0;
+		if(step==2) {
+			x = q.get(0)*(-1);
+		}
+		if(step==3) {
+			x = q.get(0)*q.get(1)+1;
+		}
+		if(step==4) {
+			x = ((q.get(0)*q.get(1)+1)*q.get(2)+q.get(0))*(-1);
+		}
+		//int x = ((subsitute+1)*q.get(2) + q.get(0))*(-1);
 		//System.out.println(x);
 		//System.out.println(step);
 		while(x < 0) {
